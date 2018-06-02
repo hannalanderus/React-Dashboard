@@ -1,0 +1,112 @@
+.App {
+    text-align: center;
+}
+
+.App-header {
+    /*background-image: url(5.jpg);*/
+    height: 40%;
+    background-color: #660022;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin-top: -5%;
+    color: white;
+    background: contain;
+    -webkit-background-size: cover;
+     -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.App-title {
+    padding: 10%;
+    font-size: 1.5em;
+}
+
+.todo-wrapper {
+    padding: 10%;
+    height: 300px;
+    margin: 5%;
+    margin-top: -5%;
+    background-color: black;
+    color: dimgrey;
+    letter-spacing: 1px;
+}
+h1{
+    font-size: 1.2em;
+}
+
+
+.timeWrapper, .currencyWrapper, .weatherWrapper, .timerWrapper{
+    padding: 10%;
+    height: 300px;
+    margin: 10%;
+    background-color: black;
+    color: dimgrey;
+    letter-spacing: 1px;
+}
+
+.timeHeadline, .todo-title, .timerHeadline, .currencyHeadline, .weatherHeadline{
+    margin-bottom: 10%;
+}
+
+.weatherImage{
+  
+}
+
+.timerWrapper.timesUp{
+    background-color: #660022;
+}
+.timerButton.timesUpButton{
+    background-color: black;
+    border: none;
+    color: dimgrey;
+    margin: 2%;
+    padding: 8px 15px;
+   
+}
+.updateButton, .timerButton{
+    margin: 2%;
+    padding: 8px 15px;
+    border: none;
+}
+
+@media screen and (min-width: 768px) {
+
+    
+
+    }
+
+
+@media screen and (min-width: 900px) {
+    
+
+    .Wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+
+.timeWrapper, .weatherWrapper{
+    margin: 5%;
+    width:20%;
+
+    }
+
+.currencyWrapper, .timerWrapper{
+     margin: 5%;
+    width: 20%;
+}
+
+}
+
+@media screen and (min-width: 1024px) {
+    
+}
+
+
+
+
+

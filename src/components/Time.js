@@ -26,8 +26,8 @@ showTime = () =>{
     return(
        <div className="timeWrapper">
           <h1 className = "timeHeadline"> STOCKHOLM TIME </h1>
-        <p>{this.state.localTime}</p>
-      </div>
+          <p className= "displayedTime">{this.state.localTime}</p>
+       </div>
     )
   }
 }

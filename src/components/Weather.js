@@ -1,6 +1,5 @@
 import React from 'react';
-/*import 'owfont/css/owfont-regular.css';*/
-/*<div className={`owf owf-${props.weather.id}`} />*/
+
 class WeatherOutput extends React.Component{
     
       state = {
@@ -19,8 +18,6 @@ class WeatherOutput extends React.Component{
         this.setState({Weather: WeatherData.weather[0].description})
          this.setState({Icon: WeatherData.weather[0].icon})
         this.setState({Temp: WeatherData.main.temp});
-        console.log(this.state.Weather);
-        console.log(WeatherData);
       })  
         
       
@@ -30,12 +27,11 @@ class WeatherOutput extends React.Component{
         const imglink = `http://openweathermap.org/img/w/${this.state.Icon}.png`;
 
         return(
-           <div className="weatherWrapper">
-             <h1 className = "weatherHeadline"> STHLM WEATHER </h1> 
-            <img className= "weatherImage" src={imglink}/>
-            <p>Weather: {this.state.Weather}</p>
-            <p>Temp: {this.state.Temp} ℃ </p>
-            
+          <div className="weatherWrapper">
+              <h1 className = "weatherHeadline"> STHLM WEATHER </h1> 
+              <img className= "weatherImage" src={imglink} alt= "imageIcon"/>
+              <p>Weather: {this.state.Weather}</p>
+              <p>Temp: {this.state.Temp} ℃ </p>
           </div>
         )
     }

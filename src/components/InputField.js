@@ -13,8 +13,8 @@ import React from 'react';
            onKeyDown={ handleSubmit }
            placeholder={placeholder}
            />
-         </div>   
-
+      </div>   
+    
     )
   
 }

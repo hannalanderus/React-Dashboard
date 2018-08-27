@@ -4,9 +4,8 @@ import UsefulStuff from './usefulstuff'
 class TimerOutput extends React.Component{
   constructor() {
     super();
-    this.state = { time: {}, seconds: 10 };
+    this.state = { time: {}, seconds: 10, resetted: 10 };
     this.timer = false;
-    this.resetted = true;
   }
 
   timeCalculator = (calculate) =>{
@@ -32,7 +31,6 @@ class TimerOutput extends React.Component{
   startTimer = () => {
     if (!this.timer) {
       this.timer = setInterval(this.countDown, 1000);
-      this.setState({resetted: false});
     }
   }
   
@@ -42,9 +40,9 @@ class TimerOutput extends React.Component{
   }
 
   resetTimer = () => {
-  clearInterval(this.timer);
-  this.setState({time: 10});
-  this.resetted = true;
+    clearInterval(this.timer);
+    let timeLeft = this.timeCalculator(this.state.resetted);
+    this.setState({ time: timeLeft, seconds: 10 });
   }
 
   countDown = () => {
@@ -64,6 +62,7 @@ class TimerOutput extends React.Component{
   render() {
     let wrapperClass = "timerWrapper";
     let timerButton = "timerButton";
+
     if(this.state.seconds <= 0){
       wrapperClass += " timesUp"; 
       timerButton += " timesUpButton";
@@ -71,11 +70,11 @@ class TimerOutput extends React.Component{
 
     return(
       <div className={wrapperClass}>
-       <h1 className = "timerHeadline"> TIMER </h1>
-      <p> {this.state.time.m} : {this.state.time.s}</p>
-      <button className={timerButton} onClick={this.startTimer}>Start</button>
-      <button className={timerButton} onClick={this.pausTimer}>Stop</button>
-      <button className={timerButton} onClick={this.resetTimer}>Reset</button>
+        <h1 className = "timerHeadline"> TIMER </h1>
+        <p> {this.state.time.m} : {this.state.time.s}</p>
+        <button className={timerButton} onClick={this.startTimer}>Start</button>
+        <button className={timerButton} onClick={this.pausTimer}>Stop</button>
+        <button className={timerButton} onClick={this.resetTimer}>Reset</button>
       </div>
       );
   }

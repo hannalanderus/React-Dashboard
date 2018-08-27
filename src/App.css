@@ -3,12 +3,10 @@
 }
 
 .App-header {
-    /*background-image: url(5.jpg);*/
     height: 40%;
     background-color: #660022;
     background-repeat: no-repeat;
     overflow: hidden;
-    margin-top: -5%;
     color: white;
     background: contain;
     -webkit-background-size: cover;
@@ -25,18 +23,40 @@
 .todo-wrapper {
     padding: 10%;
     height: 300px;
-    margin: 5%;
+    margin: 10%;
+    background-color: black;
+    color: dimgrey;
+    letter-spacing: 1px;
+}
+
+li{
+    list-style: none;
+    text-align: center;
+}
+
+h1{
+    font-size: 1.2em;
+}
+ #root > div > div.todo-wrapper > h1{
+    margin-top: -7%;
+    margin-bottom: 5%;
+}
+
+
+.timeWrapper{
+    padding: 10%;
+    height: 100px;
+    margin: 10%;
     margin-top: -5%;
     background-color: black;
     color: dimgrey;
     letter-spacing: 1px;
 }
-h1{
-    font-size: 1.2em;
+.displayedTime{
+    font-size: 2em;
 }
 
-
-.timeWrapper, .currencyWrapper, .weatherWrapper, .timerWrapper{
+ .currencyWrapper, .weatherWrapper, .timerWrapper{
     padding: 10%;
     height: 300px;
     margin: 10%;
@@ -50,7 +70,8 @@ h1{
 }
 
 .weatherImage{
-  
+  height: 100px;
+  width: 100px;
 }
 
 .timerWrapper.timesUp{
@@ -70,9 +91,37 @@ h1{
     border: none;
 }
 
+#root > div > div.Wrapper > div.todo-wrapper > div > input[type="text"]{
+    width: 100%;
+    border: none;
+    background-color: black;
+    text-align: center;
+    border-bottom: solid dimgrey 0.1px;
+    padding: 10px;
+    font-size: 1em;
+    color: dimgrey;
+}
+
+input[type=text]:focus{
+  outline: none;
+}
+
+
+.todoList{
+    color:white;
+    letter-spacing: 0.1em;
+    font-size: 1em;
+    list-style-type: none;
+    text-align: center;
+    margin-top:5%;
+}
+#root > div > div.todo-wrapper > ul > li{
+    padding: 10px;
+}
+
 @media screen and (min-width: 768px) {
 
-    
+   
 
     }
 
@@ -81,28 +130,43 @@ h1{
     
 
     .Wrapper {
+    margin-top: -100px;
+    padding: 10%;
+    padding-top: 2%;
+    /*border: solid green;*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
     
 }
 
+.timeWrapper{
+    padding-top: 50px;
+    height: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
 
-.timeWrapper, .weatherWrapper{
-    margin: 5%;
-    width:20%;
+ .weatherWrapper, .currencyWrapper, .timerWrapper, .todo-wrapper{
+    padding: 9%;
+    height: 200px;
+    width: 200px;
+    margin: 2%;
 
     }
 
-.currencyWrapper, .timerWrapper{
-     margin: 5%;
-    width: 20%;
-}
+
 
 }
 
 @media screen and (min-width: 1024px) {
+    .Wrapper{
+        padding:0px;
+        justify-content: center;
+
+    }
+
+   
     
 }
 

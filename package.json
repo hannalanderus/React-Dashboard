@@ -4,7 +4,6 @@
   "private": true,
   "homepage":"https://hannalanderus.github.io/React-Dashboard/",
   "dependencies": {
-    "gh-pages": "^1.2.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-scripts": "1.1.4",
@@ -19,3 +18,7 @@
     "deploy": "ph-pages -d build",
     "eject": "react-scripts eject"
   },
+    "devDependencies": {
+    "gh-pages": "^1.2.0"
+  }
+}

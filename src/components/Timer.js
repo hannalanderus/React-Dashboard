@@ -42,7 +42,7 @@ class TimerOutput extends React.Component{
   resetTimer = () => {
     clearInterval(this.timer);
     let timeLeft = this.timeCalculator(this.state.resetted);
-    this.setState({ time: timeLeft, seconds: 3000 });
+    this.setState({ time: timeLeft, seconds: 300 });
   }
 
   countDown = () => {

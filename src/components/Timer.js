@@ -4,7 +4,7 @@ import UsefulStuff from './usefulstuff'
 class TimerOutput extends React.Component{
   constructor() {
     super();
-    this.state = { time: {}, seconds: 10, resetted: 10 };
+    this.state = { time: {}, seconds: 300, resetted: 300 };
     this.timer = false;
   }
 
@@ -42,7 +42,7 @@ class TimerOutput extends React.Component{
   resetTimer = () => {
     clearInterval(this.timer);
     let timeLeft = this.timeCalculator(this.state.resetted);
-    this.setState({ time: timeLeft, seconds: 10 });
+    this.setState({ time: timeLeft, seconds: 3000 });
   }
 
   countDown = () => {
